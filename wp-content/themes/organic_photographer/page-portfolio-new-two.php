@@ -36,7 +36,6 @@ Template Name: Portfolio Two Column new two
 	            <?php if(of_get_option('display_portfolio_info_page') == '1') { ?>
 	            <div class="information">              
 	                <h2 class="headline-small text-center"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php esc_attr(the_title_attribute()); ?>"><?php the_title(); ?></a></h2>
-	                <?php the_excerpt(); ?>
 	            </div><!-- END .information -->
 	            <?php } ?>
 	        
