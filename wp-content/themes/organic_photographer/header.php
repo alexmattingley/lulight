@@ -34,7 +34,7 @@
 
 <!-- Icon Styles -->
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/font-awesome.css">
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/style-icons.css">
 
 <!--[if lt IE 8]>

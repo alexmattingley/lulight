@@ -15,6 +15,8 @@
 				<a class="link-google" href="<?php echo of_get_option('plus_link'); ?>" target="_blank"><i class="icon-google-plus-sign"></i></a>
 			<?php } if (of_get_option('display_pinterest') == '1') { ?>
 				<a class="link-pinterest" href="<?php echo of_get_option('pinterest_link'); ?>" target="_blank"><i class="icon-pinterest"></i></a>
+			<?php } if (of_get_option('display_instagram') == '1') { ?>
+				<a class="link-instagram" href="<?php echo of_get_option('instagram_link'); ?>" target="_blank"><i class="fa fa-instagram"></i></a>
 			<?php } if (of_get_option('display_rss') == '1') { ?>
 				<a class="link-rss" href="<?php bloginfo('rss2_url'); ?>" target="_blank"><i class="icon-rss"></i></a>
 			<?php } ?>
