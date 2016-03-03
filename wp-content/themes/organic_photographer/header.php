@@ -34,6 +34,7 @@
 
 <!-- Icon Styles -->
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/font-awesome.css">
+<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/font-awesome.min.css">
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/style-icons.css">
 
 <!--[if lt IE 8]>
