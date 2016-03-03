@@ -2,8 +2,8 @@
 Contributors: humanmade, willmot, pauldewouters, joehoyle, mattheu, tcrsavage, cuvelier
 Tags: back up, backup, backups, database, zip, db, files, archive, wp-cli, humanmade
 Requires at least: 3.9
-Tested up to: 4.4
-Stable tag: 3.3.4
+Tested up to: 4.4.2
+Stable tag: 3.4.5
 
 Simple automated backups of your WordPress-powered website.
 
@@ -118,6 +118,12 @@ You can also tweet <a href="http://twitter.com/humanmadeltd">@humanmadeltd</a> o
 
 == Upgrade Notice ==
 
+= 3.4 =
+
+* This version introduces a major refactoring of the code responsible for the core backup engine. We made sure to write
+unit tests for the new code, and we have tested it on several user's sites. It fixes a lot of old bugs, and Windows
+users should see major improvements to reliability.
+
 = 3.3.4 =
 
 * WordPress 4.4 compatibility.
@@ -152,6 +158,44 @@ You can also tweet <a href="http://twitter.com/humanmadeltd">@humanmadeltd</a> o
 
 == Changelog ==
 
+### 3.4.5 / 2016-02-23
+
+* Fix fatal error on upgrade
+
+### 3.4.4 / 2016-02-23
+
+* Ensure temporary files are correctly cleaned up before and after running a backup.
+* Avoid killing site if plugin is active on PHP 52
+* Allow custom secure key using filter
+* Fixes a bug which caused the root path to the WordPress install to be miscalulated in certain setups.
+
+### 3.4.4-beta
+
+* Fixes a bug which caused the root path to the WordPress install to be miscalulated in certain setups.
+
+### 3.4.3
+
+* Fix a bug where backups were not downloadable when WordPress installed in a subdirectory
+
+### 3.4.2
+
+* Remove the usage of `shell_exec` in two of our warning messages, fixes a PHP Warning on systems with it disabled.
+* Improve how we handle `open_basedir` restrictions, fixes a PHP Warning on some systems. Adds unit tests to cover `open_basedir` handling.
+* Show an error message if neither `mysqldump` nor `PDO:mysql` are available. Database backups won't work without at least one of them.
+* Improve our upgrade code for users upgrading from pre version 2.0. Fixes a possible fatal error and ensures backups and backup settings are correctly brought forward.
+
+### 3.4.1
+
+* Fix a possible `PHP Warning` in the Schedule Sentence.
+
+### 3.4 / 2016/01/20
+
+* Introduces a major re-factor of the underlying backups engine, many bugs fixed and much improved unit test coverage.
+* Vastly improved Windows Server support.
+* We no longer write errors and warnings to files on disk.
+* Update to the latest version of `symfony/finder`.
+* Update to the latest version of `ifsnop/mysqldump-php`.
+
 ### 3.3.4 / 2015-12-10
 
 * Fixes styling issues with WordPress 4.4
@@ -162,11 +206,11 @@ You can also tweet <a href="http://twitter.com/humanmadeltd">@humanmadeltd</a> o
 * Fixes Typos in i18n strings
 * Backups finish faster
 * Fix an issue that caused the site size to report as twice as large as it should
-* Adds PHP mysqldump fallback lib
+* Adds PHP mysqldump fallback lib (`ifsnop/mysqldump-php`)
 
 ### 3.3.2 / 2015-10-15
 
-* Mis improvements
+* Misc improvements
 
 ### 3.3.1 / 2015-10-12
 
