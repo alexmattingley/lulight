@@ -370,6 +370,12 @@ function optionsframework_options() {
 							"id" => "display_rss",
 							"std" => "1",
 							"type" => "checkbox");
+
+		$options[] = array( "name" => __("instagram Icon?", 'organicthemes'),
+							"desc" => __("This option displays the instagram icon and link in the footer.", 'organicthemes'),
+							"id" => "display_instagram",
+							"std" => "1",
+							"type" => "checkbox");
 							
 		$options[] = array( "name" => __("Twitter Name", 'organicthemes'),
 							"desc" => __("Please enter your Twitter username.", 'organicthemes'),
@@ -399,6 +405,11 @@ function optionsframework_options() {
 							"desc" => __("Enter a link to your Pinterest page.", 'organicthemes'),
 							"id" => "pinterest_link",
 							"std" => __("http://pinterest.com", 'organicthemes'),
+							"type" => "text");
+		$options[] = array( "name" => __("instagram Profile Link", 'organicthemes'),
+							"desc" => __("Enter a link to your instagram page.", 'organicthemes'),
+							"id" => "instagram_link",
+							"std" => __("http://instagram.com", 'organicthemes'),
 							"type" => "text");
 							
 		$options[] = array( "name" => __("Enable PressTrends?", 'organicthemes'),
