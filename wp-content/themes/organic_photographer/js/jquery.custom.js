@@ -52,7 +52,17 @@ jQuery(document).ready(function() {
     // 	   jQuery('.holder-half').masonry('reload');
     // 	});
     // });
+
+    /*doc ready*/
     
+    function slideToggleNewsletter(){
+        var view_width = document.documentElement.clientWidth;
+        if(view_width > 768){
+            jQuery('#mc_embed_signup').slideToggle('slow');
+        }
+    }
+
+
     /* Image Hover Effect ---------------------*/
     jQuery(window).load(function() {                          
         jQuery('.featureimg').hover(function() {
@@ -60,6 +70,8 @@ jQuery(document).ready(function() {
         }, function() {
             jQuery(this).find('.share-holder').fadeOut(200);         
         });
+
+        setTimeout(slideToggleNewsletter, 2000);
     }); 
     
     /* Fit Vids ---------------------*/
@@ -76,6 +88,10 @@ jQuery(document).ready(function() {
         	collapsible: true, 
             autoHeight: false
         });
+    });
+
+    jQuery('.close a').click(function(){
+        jQuery('#mc_embed_signup').slideToggle('slow');
     });
     
     /* Close Message Box ---------------------*/
